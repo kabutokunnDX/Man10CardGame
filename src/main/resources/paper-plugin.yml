@@ -1,0 +1,17 @@
+name: Man10CardGame
+version: '1.0-SNAPSHOT'
+main: kbtdx.minecraft.man10CardGame.Man10CardGame
+api-version: '1.20'
+authors: [ kabutokunnDX ]
+
+commands:
+  lastcard:
+    aliases: [mlc]
+
+
+permissions:
+  mlc.op:
+    default: op
+
+  mlc.player:
+    default: true
