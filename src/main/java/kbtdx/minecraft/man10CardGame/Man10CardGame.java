@@ -10,7 +10,6 @@ public final class Man10CardGame extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         plugin.getCommand("lastcard").setExecutor(new Commands());
-
     }
 
     @Override
