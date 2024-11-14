@@ -52,4 +52,13 @@ public class Functions {
         
         return deck;
     }
+
+    public static Boolean isNumber(String num){
+        try{
+            int integer = Integer.parseInt(num);
+            return true;
+        }catch (NumberFormatException e){
+            return false;
+        }
+    }
 }

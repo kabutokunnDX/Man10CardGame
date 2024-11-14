@@ -12,13 +12,15 @@ public final class Man10CardGame extends JavaPlugin {
 
     public static JavaPlugin plugin;
 
-    public static Map<Player,PlayerRecruitment> playerGameList;
+    public static Map<Player,PlayerRecruitment> playerRecruitList;
+    public static List<Player> playingPlayerList;
 
     @Override
     public void onEnable() {
         plugin = this;
         plugin.getCommand("lastcard").setExecutor(new Commands());
-        playerGameList = new HashMap<>();
+        playerRecruitList = new HashMap<>();
+        playingPlayerList = new ArrayList<>();
     }
 
     @Override

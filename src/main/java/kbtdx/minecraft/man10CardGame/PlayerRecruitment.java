@@ -5,6 +5,9 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlayerRecruitment extends Thread{
 
     private Player owner;
@@ -12,10 +15,13 @@ public class PlayerRecruitment extends Thread{
     private final Integer maxPlayer;
     private Boolean isPlayerGathered;
     private Integer timer;
+    private List<Player> playersInRoom;
 
     public PlayerRecruitment(Player owner,Integer maxPlayer){ //コンストラクタ
         this.maxPlayer = maxPlayer;
         this.owner = owner;
+        this.playersInRoom = new ArrayList<>();
+        this.playersInRoom.add(owner);
         timer = 60;
     }
 
@@ -54,5 +60,13 @@ public class PlayerRecruitment extends Thread{
 
     public Integer getMaxPlayer() {
         return maxPlayer;
+    }
+
+    public void joinGame(Player p){
+        if (playersInRoom.size() < maxPlayer){
+            playersInRoom.add(p);
+        }else {
+            p.sendMessage(Component.text("このルームには入ることができません。"));
+        }
     }
 }
