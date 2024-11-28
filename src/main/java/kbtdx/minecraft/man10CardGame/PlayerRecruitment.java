@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayerRecruitment extends Thread{
+public class PlayerRecruitment extends Thread{ //不要になったクラス
 
     private Player owner;
 

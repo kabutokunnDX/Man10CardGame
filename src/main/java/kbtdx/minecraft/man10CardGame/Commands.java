@@ -31,18 +31,6 @@ public class Commands implements CommandExecutor {
 
                 case 2:
                     if (args[0].equalsIgnoreCase("start")){
-                        if (!playingPlayerList.contains(p)){
-                            if (Functions.isNumber(args[1])){
-                                PlayerRecruitment pr = new PlayerRecruitment(p,Integer.parseInt(args[1]));
-                                playingPlayerList.add(p);
-                                playerRecruitList.put(p,pr);
-                                pr.start();
-                            }else {
-                                sender.sendMessage(Component.text("プレイ人数が無効です。"));
-                            }
-                        }else {
-                            sender.sendMessage(Component.text("あなたはすでに募集を開始しているか、ゲームに参加しています。"));
-                        }
 
                     }
             }

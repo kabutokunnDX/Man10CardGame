@@ -1,5 +1,7 @@
 package kbtdx.minecraft.man10CardGame;
 
+import org.bukkit.inventory.ItemStack;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -60,5 +62,9 @@ public class Functions {
         }catch (NumberFormatException e){
             return false;
         }
+    }
+
+    public static ItemStack generateItemWithCard(Card card){
+        return null;
     }
 }
